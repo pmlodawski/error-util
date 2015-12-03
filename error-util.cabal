@@ -1,5 +1,5 @@
 name:                error-util
-version:             0.0.0.1
+version:             0.0.1.1
 synopsis:            Set of utils and operators for error handling
 description:         Set of utils and operators for error handling
 license:             MIT
@@ -15,7 +15,7 @@ cabal-version:       >=1.10
 
 library
     exposed-modules:
-        Control.Error.Util
+        Control.Error.Operator
     default-language:   Haskell2010
     build-depends:      base >=4.7 && <4.9,
                         transformers > 0.4.0.0

@@ -1,7 +1,7 @@
 {-# LANGUAGE FlexibleContexts #-}
 
-module Control.Error.Util (
-    module Control.Error.Util,
+module Control.Error.Operator (
+    module Control.Error.Operator,
     module X,
 ) where
 
