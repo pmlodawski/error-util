@@ -1,5 +1,5 @@
 name:                error-util
-version:             0.0.1.1
+version:             0.0.1.2
 synopsis:            Set of utils and operators for error handling
 description:         Set of utils and operators for error handling
 license:             MIT
@@ -10,14 +10,14 @@ homepage:            http://github.com/pmlodawski/error-util
 bug-reports:         http://github.com/pmlodawski/error-util/issues
 category:            Error Handling
 build-type:          Simple
-tested-with:         GHC == 7.8.4, GHC == 7.10.1, GHC == 7.10.2
+tested-with:         GHC == 7.8.4, GHC == 7.10.3, GHC == 8.0.2, GHC == 8.2.1
 cabal-version:       >=1.10
 
 library
     exposed-modules:
         Control.Error.Operator
     default-language:   Haskell2010
-    build-depends:      base >=4.7 && <4.9,
+    build-depends:      base >=4.7 && < 5,
                         transformers > 0.4.0.0
 
     hs-source-dirs:     src
