@@ -40,11 +40,11 @@ val <??&> m = Maybe.maybe (throwE m) return =<< val
 --------------------------------------------------------------------------------
 
 infixl 4 <?.>
-(<?.>) :: Monad m => Maybe b -> String -> m b
+(<?.>) :: MonadFail m => Maybe b -> String -> m b
 val <?.> m = Maybe.maybe (fail m) return val
 
 infixl 4 <?&.>
-(<?&.>) :: Monad m => m (Maybe b) -> String -> m b
+(<?&.>) :: MonadFail m => m (Maybe b) -> String -> m b
 val <?&.> m = Maybe.maybe (fail m) return =<< val
 
 --------------------------------------------------------------------------------
@@ -60,5 +60,5 @@ assertE :: Monad m => Bool -> a -> ExceptT a m ()
 assertE condition msg = unless condition $ throwE msg
 
 -- | assert in any monad, using `fail` to raise error
-assertM :: Monad m => Bool -> String -> m ()
+assertM :: MonadFail m => Bool -> String -> m ()
 assertM condition msg = unless condition $ fail msg
